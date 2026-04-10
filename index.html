@@ -40,11 +40,50 @@
 
         <section class="section">
             <h2 class="section-title"><span class="hash">#</span> Projects</h2>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="backend">后端</button>
+                <button class="filter-btn" data-filter="android">Android</button>
+                <button class="filter-btn" data-filter="algorithm">算法</button>
+                <button class="filter-btn" data-filter="tool">工具</button>
+            </div>
             <div class="project-list">
-                <div class="project-card">
-                    <div class="project-header"><span class="folder-icon">📁</span><h3>project-name</h3><a href="https://github.com/22zhou" class="github-link" target="_blank">GitHub →</a></div>
-                    <p class="project-desc">项目描述...</p>
-                    <div class="project-tags"><span class="tag">Java</span><span class="tag">Spring Boot</span></div>
+                <div class="project-card" data-category="backend">
+                    <div class="project-header">
+                        <span class="folder-icon">📁</span>
+                        <h3>spring-boot-demo</h3>
+                        <a href="https://github.com/22zhou" class="github-link" target="_blank">GitHub →</a>
+                    </div>
+                    <p class="project-desc">Spring Boot 后端项目示例</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">后端</span>
+                    </div>
+                </div>
+                <div class="project-card" data-category="android">
+                    <div class="project-header">
+                        <span class="folder-icon">📁</span>
+                        <h3>android-app</h3>
+                        <a href="https://github.com/22zhou" class="github-link" target="_blank">GitHub →</a>
+                    </div>
+                    <p class="project-desc">Android 应用开发项目</p>
+                    <div class="project-tags">
+                        <span class="tag">Kotlin</span>
+                        <span class="tag">Android</span>
+                    </div>
+                </div>
+                <div class="project-card" data-category="algorithm">
+                    <div class="project-header">
+                        <span class="folder-icon">📁</span>
+                        <h3>algorithm-practice</h3>
+                        <a href="https://github.com/22zhou" class="github-link" target="_blank">GitHub →</a>
+                    </div>
+                    <p class="project-desc">算法练习与竞赛代码</p>
+                    <div class="project-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">算法</span>
+                    </div>
                 </div>
             </div>
             <a href="https://github.com/22zhou?tab=repositories" class="view-more" target="_blank">查看更多项目 →</a>
@@ -52,7 +91,31 @@
 
         <section class="section">
             <h2 class="section-title"><span class="hash">#</span> Articles</h2>
-            <p class="coming-soon">📝 博客文章即将迁移中...</p>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="java">Java</button>
+                <button class="filter-btn" data-filter="android">Android</button>
+                <button class="filter-btn" data-filter="algorithm">算法</button>
+                <button class="filter-btn" data-filter="other">其他</button>
+            </div>
+            <div class="article-list">
+                <a href="#" class="article-item" data-category="java">
+                    <span class="article-date">2026-04-10</span>
+                    <span class="article-title">Spring Boot 最佳实践</span>
+                    <span class="article-tag">Java</span>
+                </a>
+                <a href="#" class="article-item" data-category="algorithm">
+                    <span class="article-date">2026-04-08</span>
+                    <span class="article-title">动态规划入门指南</span>
+                    <span class="article-tag">算法</span>
+                </a>
+                <a href="#" class="article-item" data-category="android">
+                    <span class="article-date">2026-04-05</span>
+                    <span class="article-title">Kotlin 协程详解</span>
+                    <span class="article-tag">Android</span>
+                </a>
+            </div>
+            <p class="coming-soon">📝 更多文章即将更新...</p>
         </section>
 
         <section class="section contact-section">
@@ -67,6 +130,29 @@
             <div class="footer-code"><span class="comment">// Built with code | © 2026 22zhou</span></div>
         </footer>
     </div>
+
+    <script>
+    document.querySelectorAll('.filter-bar').forEach(bar => {
+        const buttons = bar.querySelectorAll('.filter-btn');
+        const section = bar.closest('.section');
+        const items = section.querySelectorAll('[data-category]');
+        
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                items.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+    </script>
 </body>
 </html>
-<!-- Updated at Fri Apr 10 01:20:21 PM CST 2026 -->
