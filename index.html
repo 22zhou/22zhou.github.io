@@ -48,6 +48,19 @@
                 <button class="filter-btn" data-filter="tool">工具</button>
             </div>
             <div class="project-list">
+                <div class="project-card" data-category="android">
+                    <div class="project-header">
+                        <span class="folder-icon">📁</span>
+                        <h3>DoodleView</h3>
+                        <a href="https://github.com/22zhou/DoodleView" class="github-link" target="_blank">GitHub →</a>
+                    </div>
+                    <p class="project-desc">Android 手绘涂鸦库 - 简洁、强大、易用</p>
+                    <div class="project-tags">
+                        <span class="tag">Android</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">Canvas</span>
+                    </div>
+                </div>
                 <div class="project-card" data-category="backend">
                     <div class="project-header">
                         <span class="folder-icon">📁</span>
@@ -61,30 +74,6 @@
                         <span class="tag">后端</span>
                     </div>
                 </div>
-                <div class="project-card" data-category="android">
-                    <div class="project-header">
-                        <span class="folder-icon">📁</span>
-                        <h3>android-app</h3>
-                        <a href="https://github.com/22zhou" class="github-link" target="_blank">GitHub →</a>
-                    </div>
-                    <p class="project-desc">Android 应用开发项目</p>
-                    <div class="project-tags">
-                        <span class="tag">Kotlin</span>
-                        <span class="tag">Android</span>
-                    </div>
-                </div>
-                <div class="project-card" data-category="algorithm">
-                    <div class="project-header">
-                        <span class="folder-icon">📁</span>
-                        <h3>algorithm-practice</h3>
-                        <a href="https://github.com/22zhou" class="github-link" target="_blank">GitHub →</a>
-                    </div>
-                    <p class="project-desc">算法练习与竞赛代码</p>
-                    <div class="project-tags">
-                        <span class="tag">C++</span>
-                        <span class="tag">算法</span>
-                    </div>
-                </div>
             </div>
             <a href="https://github.com/22zhou?tab=repositories" class="view-more" target="_blank">查看更多项目 →</a>
         </section>
@@ -96,7 +85,6 @@
                 <button class="filter-btn" data-filter="java">Java</button>
                 <button class="filter-btn" data-filter="android">Android</button>
                 <button class="filter-btn" data-filter="algorithm">算法</button>
-                <button class="filter-btn" data-filter="other">其他</button>
             </div>
             <div class="article-list">
                 <a href="#" class="article-item" data-category="java">
@@ -109,13 +97,118 @@
                     <span class="article-title">动态规划入门指南</span>
                     <span class="article-tag">算法</span>
                 </a>
-                <a href="#" class="article-item" data-category="android">
-                    <span class="article-date">2026-04-05</span>
-                    <span class="article-title">Kotlin 协程详解</span>
-                    <span class="article-tag">Android</span>
-                </a>
             </div>
             <p class="coming-soon">📝 更多文章即将更新...</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="hash">#</span> 🤖 AI Open Source</h2>
+            <p class="section-desc">紧跟AI潮流，这些项目值得关注</p>
+            <div class="opensource-grid">
+                <a href="https://github.com/langchain-ai/langchain" target="_blank" class="opensource-card">
+                    <div class="opensource-header">
+                        <span class="opensource-icon">🦜</span>
+                        <h3>LangChain</h3>
+                    </div>
+                    <p>构建LLM应用的框架，支持RAG、Agent、Tool Calling</p>
+                    <div class="opensource-tags"><span class="tag">Python</span><span class="tag">LLM</span></div>
+                </a>
+                <a href="https://github.com/openai/openai-python" target="_blank" class="opensource-card">
+                    <div class="opensource-header">
+                        <span class="opensource-icon">🧠</span>
+                        <h3>OpenAI Python</h3>
+                    </div>
+                    <p>OpenAI官方Python SDK，GPT-4、DALL-E、Whisper</p>
+                    <div class="opensource-tags"><span class="tag">Python</span><span class="tag">GPT</span></div>
+                </a>
+                <a href="https://github.com/ggerganov/llama.cpp" target="_blank" class="opensource-card">
+                    <div class="opensource-header">
+                        <span class="opensource-icon">🦙</span>
+                        <h3>llama.cpp</h3>
+                    </div>
+                    <p>纯C/C++的LLM推理引擎，无需GPU即可运行大模型</p>
+                    <div class="opensource-tags"><span class="tag">C++</span><span class="tag">本地部署</span></div>
+                </a>
+                <a href="https://github.com/microsoft/semantic-kernel" target="_blank" class="opensource-card">
+                    <div class="opensource-header">
+                        <span class="opensource-icon">🔷</span>
+                        <h3>Semantic Kernel</h3>
+                    </div>
+                    <p>微软开源的AI编排框架，支持C#/Python</p>
+                    <div class="opensource-tags"><span class="tag">C#</span><span class="tag">AI Agent</span></div>
+                </a>
+                <a href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank" class="opensource-card">
+                    <div class="opensource-header">
+                        <span class="opensource-icon">🤖</span>
+                        <h3>AutoGPT</h3>
+                    </div>
+                    <p>自主AI Agent，自动分解任务并执行</p>
+                    <div class="opensource-tags"><span class="tag">Python</span><span class="tag">Agent</span></div>
+                </a>
+                <a href="https://github.com/all-in-aigc/gpts-works" target="_blank" class="opensource-card">
+                    <div class="opensource-header">
+                        <span class="opensource-icon">🛠️</span>
+                        <h3>GPTs Works</h3>
+                    </div>
+                    <p>第三方GPTs商店，收录数千个自定义GPT</p>
+                    <div class="opensource-tags"><span class="tag">GPTs</span><span class="tag">工具</span></div>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="hash">#</span> 💻 Dev Open Source</h2>
+            <p class="section-desc">技术栈相关的好项目</p>
+            <div class="opensource-grid">
+                <a href="https://github.com/alibaba/spring-ai-alibaba" target="_blank" class="opensource-card">
+                    <div class="opensource-header">
+                        <span class="opensource-icon">☕</span>
+                        <h3>Spring AI Alibaba</h3>
+                    </div>
+                    <p>阿里开源的Java AI应用框架，配合Spring Boot使用</p>
+                    <div class="opensource-tags"><span class="tag">Java</span><span class="tag">AI</span></div>
+                </a>
+                <a href="https://github.com/langchain4j/langchain4j" target="_blank" class="opensource-card">
+                    <div class="opensource-header">
+                        <span class="opensource-icon">☕</span>
+                        <h3>LangChain4j</h3>
+                    </div>
+                    <p>Java版LangChain，轻松实现RAG、Agent</p>
+                    <div class="opensource-tags"><span class="tag">Java</span><span class="tag">LLM</span></div>
+                </a>
+                <a href="https://github.com/android/nowinandroid" target="_blank" class="opensource-card">
+                    <div class="opensource-header">
+                        <span class="opensource-icon">🤖</span>
+                        <h3>Now in Android</h3>
+                    </div>
+                    <p>Google官方Compose示例，最新Android开发最佳实践</p>
+                    <div class="opensource-tags"><span class="tag">Android</span><span class="tag">Kotlin</span></div>
+                </a>
+                <a href="https://github.com/youngyangyang04/leetcode-master" target="_blank" class="opensource-card">
+                    <div class="opensource-header">
+                        <span class="opensource-icon">🧮</span>
+                        <h3>代码随想录</h3>
+                    </div>
+                    <p>LeetCode刷题攻略，60万字图解</p>
+                    <div class="opensource-tags"><span class="tag">算法</span><span class="tag">LeetCode</span></div>
+                </a>
+                <a href="https://github.com/hoppscotch/hoppscotch" target="_blank" class="opensource-card">
+                    <div class="opensource-header">
+                        <span class="opensource-icon">🛠️</span>
+                        <h3>Hoppscotch</h3>
+                    </div>
+                    <p>开源API开发工具，Postman替代品</p>
+                    <div class="opensource-tags"><span class="tag">工具</span><span class="tag">API</span></div>
+                </a>
+                <a href="https://github.com/chat2db/Chat2DB" target="_blank" class="opensource-card">
+                    <div class="opensource-header">
+                        <span class="opensource-icon">🗄️</span>
+                        <h3>Chat2DB</h3>
+                    </div>
+                    <p>AI驱动的数据库工具，自然语言生成SQL</p>
+                    <div class="opensource-tags"><span class="tag">数据库</span><span class="tag">AI</span></div>
+                </a>
+            </div>
         </section>
 
         <section class="section contact-section">

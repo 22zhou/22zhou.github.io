@@ -227,3 +227,63 @@ body {
     .article-date { min-width: auto; font-size: 12px; }
     .article-title { width: 100%; order: 2; }
 }
+
+/* Open Source Section */
+.section-desc {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.opensource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.opensource-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 16px;
+    text-decoration: none;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.opensource-card:hover {
+    border-color: #58a6ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.15);
+}
+
+.opensource-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.opensource-icon {
+    font-size: 24px;
+}
+
+.opensource-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #58a6ff;
+    margin: 0;
+}
+
+.opensource-card p {
+    font-size: 13px;
+    color: #888;
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+}
+
+.opensource-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
