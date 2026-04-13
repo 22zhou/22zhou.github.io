@@ -40,12 +40,26 @@
 
         <section class="section">
             <h2 class="section-title"><span class="hash">#</span> GitHub Stats</h2>
-            <div class="stats-container">
-                <div class="stats-card">
-                    <img src="https://github-readme-stats.vercel.app/api?username=22zhou&show_icons=true&theme=tokyonight&hide_border=true&title_color=7aa2f7&icon_color=7aa2f7&text_color=c0caf5&bg_color=1a1b26" alt="GitHub Stats">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-number" id="repos">-</div>
+                    <div class="stat-label">Repositories</div>
                 </div>
-                <div class="stats-card">
-                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=22zhou&layout=compact&theme=tokyonight&hide_border=true&title_color=7aa2f7&text_color=c0caf5&bg_color=1a1b26" alt="Top Languages">
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-number" id="stars">-</div>
+                    <div class="stat-label">Stars Earned</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🍴</div>
+                    <div class="stat-number" id="forks">-</div>
+                    <div class="stat-label">Forks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📝</div>
+                    <div class="stat-number" id="commits">-</div>
+                    <div class="stat-label">Commits</div>
                 </div>
             </div>
         </section>
@@ -89,14 +103,12 @@
 
         <section class="section">
             <h2 class="section-title"><span class="hash">#</span> Articles</h2>
-            <div class="filter-bar">
-                <button class="filter-btn active" data-filter="all">全部</button>
-                <button class="filter-btn" data-filter="java">Java</button>
-                <button class="filter-btn" data-filter="android">Android</button>
-                <button class="filter-btn" data-filter="algorithm">算法</button>
-                <button class="filter-btn" data-filter="other">其他</button>
-            </div>
-            <div class="article-list">
+            <div class="article-list" id="article-list">
+                <a href="https://github.com/22zhou/daily-knowledge-card/blob/main/2026-04-13.md" class="article-item" data-category="other">
+                    <span class="article-date">2026-04-13</span>
+                    <span class="article-title">每日知识卡片 - GBrain开源项目、答辩画图技巧</span>
+                    <span class="article-tag">知识</span>
+                </a>
                 <a href="#" class="article-item" data-category="java">
                     <span class="article-date">2026-04-10</span>
                     <span class="article-title">Spring Boot 最佳实践</span>
@@ -113,7 +125,6 @@
                     <span class="article-tag">Android</span>
                 </a>
             </div>
-            <p class="coming-soon">📝 更多文章即将更新...</p>
         </section>
 
         <section class="section contact-section">
@@ -130,6 +141,40 @@
     </div>
 
     <script>
+    // Fetch GitHub stats
+    fetch('https://api.github.com/users/22zhou')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('repos').textContent = data.public_repos;
+        });
+
+    // Fetch repos for stars and forks
+    fetch('https://api.github.com/users/22zhou/repos?per_page=100')
+        .then(response => response.json())
+        .then(repos => {
+            let stars = 0, forks = 0;
+            repos.forEach(repo => {
+                stars += repo.stargazers_count;
+                forks += repo.forks_count;
+            });
+            document.getElementById('stars').textContent = stars;
+            document.getElementById('forks').textContent = forks;
+        });
+
+    // Fetch commits (approximate from events)
+    fetch('https://api.github.com/users/22zhou/events/public?per_page=100')
+        .then(response => response.json())
+        .then(events => {
+            let commits = 0;
+            events.forEach(event => {
+                if (event.type === 'PushEvent') {
+                    commits += event.payload.size || 0;
+                }
+            });
+            document.getElementById('commits').textContent = commits + '+';
+        });
+
+    // Filter functionality
     document.querySelectorAll('.filter-bar').forEach(bar => {
         const buttons = bar.querySelectorAll('.filter-btn');
         const section = bar.closest('.section');
