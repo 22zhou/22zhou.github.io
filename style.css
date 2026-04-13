@@ -487,3 +487,43 @@ body {
         gap: 8px;
     }
 }
+
+/* Articles section */
+.article-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.article-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.article-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #58a6ff;
+}
+
+.article-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: #7d8590;
+    white-space: nowrap;
+}
+
+.article-title {
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.article-title:hover {
+    text-decoration: underline;
+}
