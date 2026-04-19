@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22zhou | Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-header">
+        <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+        </div>
+        <span class="terminal-title">zsh ~/portfolio</span>
+    </div>
+
+    <div class="container">
+        <section class="hero">
+            <div class="code-block"><span class="keyword">const</span> <span class="variable">developer</span> = {</div>
+            <div class="code-line">  <span class="property">name</span>: <span class="string">"22zhou"</span>,</div>
+            <div class="code-line">  <span class="property">role</span>: <span class="string">"Backend & Android Developer"</span>,</div>
+            <div class="code-line">  <span class="property">location</span>: <span class="string">"China"</span>,</div>
+            <div class="code-line">  <span class="property">passion</span>: <span class="string">"Code & Algorithm"</span></div>
+            <div class="code-block">};</div>
+            <p class="intro">热爱编程，专注于后端开发与Android应用。喜欢研究算法，追求简洁优雅的代码。</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="hash">#</span> Tech Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-card"><div class="tech-icon">☕</div><h3>Java</h3><p>后端开发、Spring生态</p></div>
+                <div class="tech-card"><div class="tech-icon">⚡</div><h3>C++</h3><p>系统编程、性能优化</p></div>
+                <div class="tech-card"><div class="tech-icon">🧮</div><h3>Algorithm</h3><p>数据结构、算法竞赛</p></div>
+                <div class="tech-card"><div class="tech-icon">🤖</div><h3>Android</h3><p>应用开发、Kotlin</p></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="hash">#</span> GitHub Stats</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-number" id="repos">-</div>
+                    <div class="stat-label">Repositories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-number" id="stars">-</div>
+                    <div class="stat-label">Stars Earned</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🍴</div>
+                    <div class="stat-number" id="forks">-</div>
+                    <div class="stat-label">Forks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📝</div>
+                    <div class="stat-number" id="commits">-</div>
+                    <div class="stat-label">Commits</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="hash">#</span> Projects</h2>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="android">Android</button>
+                <button class="filter-btn" data-filter="tool">工具</button>
+            </div>
+            <div class="project-list">
+                <div class="project-card" data-category="android">
+                    <div class="project-header">
+                        <span class="folder-icon">📁</span>
+                        <h3>DoodleView</h3>
+                        <a href="https://github.com/22zhou/DoodleView" class="github-link" target="_blank">GitHub →</a>
+                    </div>
+                    <p class="project-desc">Android涂鸦绘图库，支持画笔、橡皮擦、撤销重做等功能</p>
+                    <div class="project-tags">
+                        <span class="tag">Kotlin</span>
+                        <span class="tag">Android</span>
+                        <span class="tag">开源库</span>
+                    </div>
+                </div>
+                <div class="project-card" data-category="tool">
+                    <div class="project-header">
+                        <span class="folder-icon">📁</span>
+                        <h3>每日知识卡片</h3>
+                        <a href="https://github.com/22zhou/daily-knowledge-card" class="github-link" target="_blank">GitHub →</a>
+                    </div>
+                    <p class="project-desc">每日生成科技热点、程序员英语、面试题等知识卡片</p>
+                    <div class="project-tags">
+                        <span class="tag">自动化</span>
+                        <span class="tag">知识管理</span>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/22zhou?tab=repositories" class="view-more" target="_blank">查看更多项目 →</a>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span class="hash">#</span> Articles</h2>
+            <div class="article-list" id="article-list">
+                <a href="https://github.com/22zhou/daily-knowledge-card/blob/main/2026-04-14.md" class="article-item" data-category="other" style="display:block;" onclick="showArticle('知识卡片 2026-04-14')">
+                    <span class="article-date">2026-04-14</span>
+                    <span class="article-title">每日知识卡片 - Android手势缩放与拖拽实现</span>
+                    <span class="article-tag">知识</span>
+                </a>
+                <a href="https://github.com/22zhou/daily-knowledge-card/blob/main/2026-04-13.md" class="article-item" data-category="other">
+                    <span class="article-date">2026-04-13</span>
+                    <span class="article-title">每日知识卡片 - GBrain开源项目、答辩画图技巧</span>
+                    <span class="article-tag">知识</span>
+                </a>
+                <a href="#" class="article-item" data-category="java">
+                    <span class="article-date">2026-04-10</span>
+                    <span class="article-title">Spring Boot 最佳实践</span>
+                    <span class="article-tag">Java</span>
+                </a>
+                <a href="#" class="article-item" data-category="algorithm">
+                    <span class="article-date">2026-04-08</span>
+                    <span class="article-title">动态规划入门指南</span>
+                    <span class="article-tag">算法</span>
+                </a>
+                <a href="#" class="article-item" data-category="android">
+                    <span class="article-date">2026-04-05</span>
+                    <span class="article-title">Kotlin 协程详解</span>
+                    <span class="article-tag">Android</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section contact-section">
+            <h2 class="section-title"><span class="hash">#</span> Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item"><span class="contact-icon">📧</span><a href="mailto:zhou22hn@qq.com">zhou22hn@qq.com</a></div>
+                <div class="contact-item"><span class="contact-icon">🐙</span><a href="https://github.com/22zhou" target="_blank">github.com/22zhou</a></div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-code"><span class="comment">// Built with code | © 2026 22zhou</span></div>
+        </footer>
+    </div>
+
+    <script>
+    // Fetch GitHub stats
+    fetch('https://api.github.com/users/22zhou')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('repos').textContent = data.public_repos;
+        });
+
+    // Fetch repos for stars and forks
+    fetch('https://api.github.com/users/22zhou/repos?per_page=100')
+        .then(response => response.json())
+        .then(repos => {
+            let stars = 0, forks = 0;
+            repos.forEach(repo => {
+                stars += repo.stargazers_count;
+                forks += repo.forks_count;
+            });
+            document.getElementById('stars').textContent = stars;
+            document.getElementById('forks').textContent = forks;
+        });
+
+    // Fetch commits (approximate from events)
+    fetch('https://api.github.com/users/22zhou/events/public?per_page=100')
+        .then(response => response.json())
+        .then(events => {
+            let commits = 0;
+            events.forEach(event => {
+                if (event.type === 'PushEvent') {
+                    commits += event.payload.size || 0;
+                }
+            });
+            document.getElementById('commits').textContent = commits + '+';
+        });
+
+    // Filter functionality
+    document.querySelectorAll('.filter-bar').forEach(bar => {
+        const buttons = bar.querySelectorAll('.filter-btn');
+        const section = bar.closest('.section');
+        const items = section.querySelectorAll('[data-category]');
+        
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                items.forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+    </script>
+</body>
+</html>

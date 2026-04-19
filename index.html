@@ -1,206 +1,213 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>22zhou | Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>22zhou | Backend & Android Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="terminal-header">
-        <div class="terminal-dots">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
+  <!-- 导航栏 -->
+  <nav class="nav" id="nav">
+    <div class="container nav-content">
+      <a href="#" class="nav-logo">
+        <span class="logo-text">22zhou</span>
+      </a>
+      <div class="nav-links">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#articles" class="nav-link">Articles</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="https://github.com/22zhou" target="_blank" class="nav-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-text animate-in delay-1">
+        <span class="hero-label">Hello, I'm</span>
+        <h1 class="hero-name">
+          <span class="gradient-text">22zhou</span>
+        </h1>
+        <p class="hero-role">Backend & Android Developer</p>
+        <p class="hero-desc">
+          热爱编程，专注于后端开发与 Android 应用。喜欢研究算法，追求简洁优雅的代码。
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            查看项目
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="https://github.com/22zhou" target="_blank" class="btn btn-ghost">
+            GitHub
+          </a>
         </div>
-        <span class="terminal-title">zsh ~/portfolio</span>
+      </div>
     </div>
+  </section>
 
+  <!-- Tech Stack Section -->
+  <section class="section" id="tech">
     <div class="container">
-        <section class="hero">
-            <div class="code-block"><span class="keyword">const</span> <span class="variable">developer</span> = {</div>
-            <div class="code-line">  <span class="property">name</span>: <span class="string">"22zhou"</span>,</div>
-            <div class="code-line">  <span class="property">role</span>: <span class="string">"Backend & Android Developer"</span>,</div>
-            <div class="code-line">  <span class="property">location</span>: <span class="string">"China"</span>,</div>
-            <div class="code-line">  <span class="property">passion</span>: <span class="string">"Code & Algorithm"</span></div>
-            <div class="code-block">};</div>
-            <p class="intro">热爱编程，专注于后端开发与Android应用。喜欢研究算法，追求简洁优雅的代码。</p>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title"><span class="hash">#</span> Tech Stack</h2>
-            <div class="tech-grid">
-                <div class="tech-card"><div class="tech-icon">☕</div><h3>Java</h3><p>后端开发、Spring生态</p></div>
-                <div class="tech-card"><div class="tech-icon">⚡</div><h3>C++</h3><p>系统编程、性能优化</p></div>
-                <div class="tech-card"><div class="tech-icon">🧮</div><h3>Algorithm</h3><p>数据结构、算法竞赛</p></div>
-                <div class="tech-card"><div class="tech-icon">🤖</div><h3>Android</h3><p>应用开发、Kotlin</p></div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title"><span class="hash">#</span> GitHub Stats</h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">📊</div>
-                    <div class="stat-number" id="repos">-</div>
-                    <div class="stat-label">Repositories</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">⭐</div>
-                    <div class="stat-number" id="stars">-</div>
-                    <div class="stat-label">Stars Earned</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">🍴</div>
-                    <div class="stat-number" id="forks">-</div>
-                    <div class="stat-label">Forks</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">📝</div>
-                    <div class="stat-number" id="commits">-</div>
-                    <div class="stat-label">Commits</div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title"><span class="hash">#</span> Projects</h2>
-            <div class="filter-bar">
-                <button class="filter-btn active" data-filter="all">全部</button>
-                <button class="filter-btn" data-filter="android">Android</button>
-                <button class="filter-btn" data-filter="tool">工具</button>
-            </div>
-            <div class="project-list">
-                <div class="project-card" data-category="android">
-                    <div class="project-header">
-                        <span class="folder-icon">📁</span>
-                        <h3>DoodleView</h3>
-                        <a href="https://github.com/22zhou/DoodleView" class="github-link" target="_blank">GitHub →</a>
-                    </div>
-                    <p class="project-desc">Android涂鸦绘图库，支持画笔、橡皮擦、撤销重做等功能</p>
-                    <div class="project-tags">
-                        <span class="tag">Kotlin</span>
-                        <span class="tag">Android</span>
-                        <span class="tag">开源库</span>
-                    </div>
-                </div>
-                <div class="project-card" data-category="tool">
-                    <div class="project-header">
-                        <span class="folder-icon">📁</span>
-                        <h3>每日知识卡片</h3>
-                        <a href="https://github.com/22zhou/daily-knowledge-card" class="github-link" target="_blank">GitHub →</a>
-                    </div>
-                    <p class="project-desc">每日生成科技热点、程序员英语、面试题等知识卡片</p>
-                    <div class="project-tags">
-                        <span class="tag">自动化</span>
-                        <span class="tag">知识管理</span>
-                    </div>
-                </div>
-            </div>
-            <a href="https://github.com/22zhou?tab=repositories" class="view-more" target="_blank">查看更多项目 →</a>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title"><span class="hash">#</span> Articles</h2>
-            <div class="article-list" id="article-list">
-                <a href="https://github.com/22zhou/daily-knowledge-card/blob/main/2026-04-14.md" class="article-item" data-category="other" style="display:block;" onclick="showArticle('知识卡片 2026-04-14')">
-                    <span class="article-date">2026-04-14</span>
-                    <span class="article-title">每日知识卡片 - Android手势缩放与拖拽实现</span>
-                    <span class="article-tag">知识</span>
-                </a>
-                <a href="https://github.com/22zhou/daily-knowledge-card/blob/main/2026-04-13.md" class="article-item" data-category="other">
-                    <span class="article-date">2026-04-13</span>
-                    <span class="article-title">每日知识卡片 - GBrain开源项目、答辩画图技巧</span>
-                    <span class="article-tag">知识</span>
-                </a>
-                <a href="#" class="article-item" data-category="java">
-                    <span class="article-date">2026-04-10</span>
-                    <span class="article-title">Spring Boot 最佳实践</span>
-                    <span class="article-tag">Java</span>
-                </a>
-                <a href="#" class="article-item" data-category="algorithm">
-                    <span class="article-date">2026-04-08</span>
-                    <span class="article-title">动态规划入门指南</span>
-                    <span class="article-tag">算法</span>
-                </a>
-                <a href="#" class="article-item" data-category="android">
-                    <span class="article-date">2026-04-05</span>
-                    <span class="article-title">Kotlin 协程详解</span>
-                    <span class="article-tag">Android</span>
-                </a>
-            </div>
-        </section>
-
-        <section class="section contact-section">
-            <h2 class="section-title"><span class="hash">#</span> Contact</h2>
-            <div class="contact-info">
-                <div class="contact-item"><span class="contact-icon">📧</span><a href="mailto:zhou22hn@qq.com">zhou22hn@qq.com</a></div>
-                <div class="contact-item"><span class="contact-icon">🐙</span><a href="https://github.com/22zhou" target="_blank">github.com/22zhou</a></div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <div class="footer-code"><span class="comment">// Built with code | © 2026 22zhou</span></div>
-        </footer>
+      <h2 class="section-title reveal">
+        <span class="gradient-text">#</span> Tech Stack
+      </h2>
+      <div class="tech-grid reveal">
+        <div class="tech-card">
+          <div class="tech-icon">☕</div>
+          <h3 class="tech-name">Java</h3>
+          <p class="tech-desc">后端开发、Spring生态</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">⚡</div>
+          <h3 class="tech-name">C++</h3>
+          <p class="tech-desc">系统编程、性能优化</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">🧮</div>
+          <h3 class="tech-name">Algorithm</h3>
+          <p class="tech-desc">数据结构、算法竞赛</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">🤖</div>
+          <h3 class="tech-name">Android</h3>
+          <p class="tech-desc">应用开发、Kotlin</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <script>
-    // Fetch GitHub stats
-    fetch('https://api.github.com/users/22zhou')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('repos').textContent = data.public_repos;
-        });
+  <!-- Stats Section -->
+  <section class="section section-stats">
+    <div class="container">
+      <div class="stats-grid reveal">
+        <div class="stat-card">
+          <div class="stat-value" data-target="4">0</div>
+          <div class="stat-label">Repositories</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" data-target="0">0</div>
+          <div class="stat-label">Stars Earned</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" data-target="0">0</div>
+          <div class="stat-label">Forks</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" data-target="50">0</div>
+          <div class="stat-label">Commits</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    // Fetch repos for stars and forks
-    fetch('https://api.github.com/users/22zhou/repos?per_page=100')
-        .then(response => response.json())
-        .then(repos => {
-            let stars = 0, forks = 0;
-            repos.forEach(repo => {
-                stars += repo.stargazers_count;
-                forks += repo.forks_count;
-            });
-            document.getElementById('stars').textContent = stars;
-            document.getElementById('forks').textContent = forks;
-        });
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="gradient-text">#</span> Projects
+      </h2>
+      <div class="projects-grid">
+        <a href="https://github.com/22zhou/DoodleView" target="_blank" class="project-card reveal glow-border">
+          <div class="project-header">
+            <span class="project-icon">📁</span>
+            <h3 class="project-title">DoodleView</h3>
+          </div>
+          <p class="project-desc">Android涂鸦绘图库，支持画笔、橡皮擦、撤销重做等功能</p>
+          <div class="project-tags">
+            <span class="tag">Kotlin</span>
+            <span class="tag">Android</span>
+            <span class="tag tag-accent">开源库</span>
+          </div>
+        </a>
+        <a href="https://github.com/22zhou/daily-knowledge-card" target="_blank" class="project-card reveal glow-border">
+          <div class="project-header">
+            <span class="project-icon">📁</span>
+            <h3 class="project-title">每日知识卡片</h3>
+          </div>
+          <p class="project-desc">每日生成科技热点、程序员英语、面试题等知识卡片</p>
+          <div class="project-tags">
+            <span class="tag">自动化</span>
+            <span class="tag tag-accent">知识管理</span>
+          </div>
+        </a>
+      </div>
+      <div class="section-footer reveal">
+        <a href="https://github.com/22zhou?tab=repositories" target="_blank" class="link-arrow">
+          查看更多项目
+        </a>
+      </div>
+    </div>
+  </section>
 
-    // Fetch commits (approximate from events)
-    fetch('https://api.github.com/users/22zhou/events/public?per_page=100')
-        .then(response => response.json())
-        .then(events => {
-            let commits = 0;
-            events.forEach(event => {
-                if (event.type === 'PushEvent') {
-                    commits += event.payload.size || 0;
-                }
-            });
-            document.getElementById('commits').textContent = commits + '+';
-        });
+  <!-- Articles Section -->
+  <section class="section" id="articles">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="gradient-text">#</span> Articles
+      </h2>
+      <div class="articles-list">
+        <a href="https://github.com/22zhou/daily-knowledge-card/blob/main/2026-04-19.md" target="_blank" class="article-item reveal">
+          <span class="article-date">2026-04-19</span>
+          <span class="article-title">每日知识卡片 - Android相册按日期分组</span>
+          <span class="tag tag-sm">Android</span>
+        </a>
+        <a href="https://github.com/22zhou/daily-knowledge-card/blob/main/2026-04-18.md" target="_blank" class="article-item reveal">
+          <span class="article-date">2026-04-18</span>
+          <span class="article-title">每日知识卡片 - Android图像编辑功能开发</span>
+          <span class="tag tag-sm">Android</span>
+        </a>
+        <a href="https://github.com/22zhou/daily-knowledge-card/blob/main/2026-04-17.md" target="_blank" class="article-item reveal">
+          <span class="article-date">2026-04-17</span>
+          <span class="article-title">每日知识卡片 - GBrain开源项目解析</span>
+          <span class="tag tag-sm">知识</span>
+        </a>
+        <a href="https://github.com/22zhou/daily-knowledge-card/blob/main/2026-04-16.md" target="_blank" class="article-item reveal">
+          <span class="article-date">2026-04-16</span>
+          <span class="article-title">每日知识卡片 - Android滤镜系统架构</span>
+          <span class="tag tag-sm">Android</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    // Filter functionality
-    document.querySelectorAll('.filter-bar').forEach(bar => {
-        const buttons = bar.querySelectorAll('.filter-btn');
-        const section = bar.closest('.section');
-        const items = section.querySelectorAll('[data-category]');
-        
-        buttons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                buttons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                
-                const filter = btn.dataset.filter;
-                items.forEach(item => {
-                    if (filter === 'all' || item.dataset.category === filter) {
-                        item.style.display = '';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-    });
-    </script>
+  <!-- Contact Section -->
+  <section class="section section-contact" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="gradient-text">#</span> Contact
+      </h2>
+      <div class="contact-grid reveal">
+        <a href="mailto:zhou22hn@qq.com" class="contact-card">
+          <span class="contact-icon">📧</span>
+          <span class="contact-text">zhou22hn@qq.com</span>
+        </a>
+        <a href="https://github.com/22zhou" target="_blank" class="contact-card">
+          <span class="contact-icon">🐙</span>
+          <span class="contact-text">github.com/22zhou</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">© 2026 22zhou. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
